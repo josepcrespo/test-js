@@ -3,7 +3,10 @@ import Event from './Event';
 
 export default class EventManagerFactory{
     static create(events, types) {
-        // implement your code here...
-        return new EventManager();
+        const filteredEvents = events.filter((event) => 
+            types.includes(event.type)).map((event) => new Event(event)
+        );
+
+        return new EventManager(filteredEvents);
     }
 };

@@ -46,4 +46,4 @@ Para empezar a desarrollar tendremos que instalar algunas librerías que están 
 - `npm install`
 
 Posteriormente, con el objetivo de compilar el código y que esta tarea se ejecute con cada cambio sobre los archivos, tendremos que ejecutar el siguiente comando: 
-- `webpack --watch`
+- `node_modules/.bin/webpack --watch`
