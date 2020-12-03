@@ -63,7 +63,7 @@ npm run lint
 *WebpackDevServer* para desarrollar y probar los cambios con mayor agilidad.
 
 ```
-npm run server:start
+node_modules/.bin/webpack --watch --mode=development
 ```
 
 *Webpack* para crear el directorio `dist` con la versión de producción del código JS desarrollado.  

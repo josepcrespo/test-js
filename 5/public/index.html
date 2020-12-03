@@ -294,11 +294,17 @@
         </div>
     </section>
     <!-- Import library here -->
+    <script src="../scripts/es-checker.js"></script>
     <script>
-      var libes6 = document.createElement('script');
-      libes6.async = true;
-      libes6.src = '../dist/sunmedia-es6.js';
-      document.body.appendChild(libes6)
+      var sunmedia = document.createElement('script');
+      sunmedia.async = true;
+      if (checkES6Support()) {
+          sunmedia.src = '../dist/sunmedia-es6.js';
+      } else {
+          sunmedia.src = '../dist/sunmedia-es5.js';
+      }
+
+      document.body.appendChild(sunmedia);
     </script>
     <!-- ./Import -->
 </body>

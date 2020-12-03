@@ -8,10 +8,18 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'eslint-loader'],
+        use: [
+            {
+                loader: 'ts-loader',
+                options: {
+                    configFile: './tsconfig.json'
+                }
+            },
+            'eslint-loader'],
       },
     ],
   }
 });
+
